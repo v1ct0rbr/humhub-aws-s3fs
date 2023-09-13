@@ -61,7 +61,7 @@ echo 'Instalando dependências..................................................
 
 sudo apt update -y && sudo apt-get install -y unattended-upgrades
 
-sudo cp /etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades.backup_$(date +%s%N | cut -b1-13)
+#sudo cp /etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades.backup_$(date +%s%N | cut -b1-13)
 
 sudo sed -i '/${distro_id}:${distro_codename}-proposed/c\"${distro_id}:${distro_codename}-proposed";' "/etc/apt/apt.conf.d/50unattended-upgrades"
 sudo sed -i '/${distro_id}:${distro_codename}-backports/c\"${distro_id}:${distro_codename}-backports";' "/etc/apt/apt.conf.d/50unattended-upgrades"
@@ -535,7 +535,7 @@ var_export($common);
     sudo sed -i '/^#user_allow_other/s/^#//' /etc/fuse.conf
     aws s3 sync "${HUMHUB_AWS_S3_UPLOAD_DIRECTORY}" "s3://$HUMHUB_AWS_S3_BUCKET"
     if [ -d "${HUMHUB_AWS_S3_UPLOAD_DIRECTORY}" ];then
-        s3fs "$HUMHUB_AWS_S3_BUCKET" "${HUMHUB_AWS_S3_UPLOAD_DIRECTORY}" -o _netdev,allow_other,nonempty,umask=000,passwd_file=/home/ubuntu/.passwd-s3fs,use_cache=/tmp
+        s3fs "$HUMHUB_AWS_S3_BUCKET" "${HUMHUB_AWS_S3_UPLOAD_DIRECTORY}" -o _netdev,allow_other,nonempty,umask=000,passwd_file=/home/ubuntu/.passwd-s3fs,use_cache=/tmp > /etc/fstab
        
     fi
     cd  ${HUMHUB_DIR}/protected/vendor/yiisoft/yii2/helpers
