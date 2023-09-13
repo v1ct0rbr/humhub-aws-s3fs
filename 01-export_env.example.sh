@@ -31,7 +31,7 @@ export HUMHUB_TRUSTED_IPS='0.0.0.0/0'
 
 #### Variáveis de e-mail (Precisa estar préconfigurado) ####
 export HUMHUB_MAILER_SYSTEM_EMAIL_ADDRESS='humhub@humhub.example.com'
-export HUMHUB_MAILER_SYSTEM_EMAIL_NAME='HumHub - Tecnofoco'
+export HUMHUB_MAILER_SYSTEM_EMAIL_NAME='HumHub'
 export HUMHUB_MAILER_TRANSPORT_TYPE='smtp'
 export HUMHUB_MAILER_HOSTNAME='mail_server'
 export HUMHUB_MAILER_PORT='25'
@@ -46,12 +46,12 @@ export HUMHUB_REDIS_PORT='6582'
 export HUMHUB_REDIS_PASSWORD='redis_password'
 
 
-export HUMHUB_AWS_S3_BUCKET='BUCKET_UPLOAD'
-export HUMHUB_AWS_KEY_ID='AWS_KEY'
-export HUMHUB_AWS_ACCESS_KEY='AWS_SECRET_KEY'
+export HUMHUB_AWS_S3_BUCKET='seu bucket de arquivos'
+export HUMHUB_AWS_KEY_ID='sua key'
+export HUMHUB_AWS_ACCESS_KEY='sua secret key'
 export HUMHUB_AWS_S3_UPLOAD_DIRECTORY="${HUMHUB_DIR}/uploads"
 
 ##### EXCLUSIVO PARA O S3 ########
 S3_CONFIG_ENABLED=1
-S3_BUCKET="bucket_de_configuração"
+S3_BUCKET="seu bucket de arquivos de configurações"
 S3_KEY=".version"
