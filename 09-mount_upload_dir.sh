@@ -18,7 +18,7 @@ if [ ! -f $SCRIPT_BOOT ]; then
   cd /home/ubuntu
   touch $SCRIPT_BOOT
   echo '#!/bin/bash
-s3fs '$HUMHUB_AWS_S3_BUCKET' '$HUMHUB_AWS_S3_UPLOAD_DIRECTORY' -o _netdev,allow_other,nonempty,umask=000,passwd_file=/home/ubuntu/.passwd-s3fs,use_cache=/tmp' >$SCRIPT_BOOT
+sudo s3fs '$HUMHUB_AWS_S3_BUCKET' '$HUMHUB_AWS_S3_UPLOAD_DIRECTORY' -o _netdev,allow_other,nonempty,umask=000,passwd_file=/home/ubuntu/.passwd-s3fs,use_cache=/tmp' >$SCRIPT_BOOT
 
   chmod +x $SCRIPT_BOOT
 
