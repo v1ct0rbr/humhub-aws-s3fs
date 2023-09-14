@@ -1,3 +1,5 @@
 full_script.sh
 01-export_env.sh
 configure.sh
+nat_instance
+nat_instance/*

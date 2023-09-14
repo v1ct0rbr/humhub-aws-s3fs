@@ -164,11 +164,12 @@ var_export($common);
         php yii 'settings/set' 'base' 'mailer.allowSelfSignedCerts' "${HUMHUB_MAILER_ALLOW_SELF_SIGNED_CERTS}"
     fi
     echo "Setting permissions..."
-    sudo chown -R www-data:www-data ${HUMHUB_DIR}/uploads
-    sudo chown -R www-data:www-data ${HUMHUB_DIR}/protected/modules
-    sudo chown -R www-data:www-data ${HUMHUB_DIR}/protected/config
-    sudo chown -R www-data:www-data ${HUMHUB_DIR}/protected/runtime
-    sudo chown www-data:www-data ${HUMHUB_DIR}/protected/config/dynamic.php
+    sudo chown -R www-data:www-data ${HUMHUB_DIR}
+    # sudo chown -R www-data:www-data ${HUMHUB_DIR}/uploads
+    # sudo chown -R www-data:www-data ${HUMHUB_DIR}/protected/modules
+    # sudo chown -R www-data:www-data ${HUMHUB_DIR}/protected/config
+    # sudo chown -R www-data:www-data ${HUMHUB_DIR}/protected/runtime
+    # sudo chown www-data:www-data ${HUMHUB_DIR}/protected/config/dynamic.php
     
     
     # export HUMHUB_AWS_S3_BUCKET=tecnocthumhub
