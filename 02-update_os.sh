@@ -2,19 +2,21 @@
 
 echo 'Instalando dependências..................................................1%'
 
-sudo apt update -y && sudo apt-get install -y unattended-upgrades
+sudo apt update -y 
+
+#sudo apt-get install -y unattended-upgrades
 
 #sudo cp /etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades.backup_$(date +%s%N | cut -b1-13)
 
-sudo sed -i '/${distro_id}:${distro_codename}-proposed/c\"${distro_id}:${distro_codename}-proposed";' "/etc/apt/apt.conf.d/50unattended-upgrades"
-sudo sed -i '/${distro_id}:${distro_codename}-backports/c\"${distro_id}:${distro_codename}-backports";' "/etc/apt/apt.conf.d/50unattended-upgrades"
-sudo sed -i '/${distro_id}:${distro_codename}-updates/c\"${distro_id}:${distro_codename}-updates";' "/etc/apt/apt.conf.d/50unattended-upgrades"
+# sudo sed -i '/${distro_id}:${distro_codename}-proposed/c\"${distro_id}:${distro_codename}-proposed";' "/etc/apt/apt.conf.d/50unattended-upgrades"
+# sudo sed -i '/${distro_id}:${distro_codename}-backports/c\"${distro_id}:${distro_codename}-backports";' "/etc/apt/apt.conf.d/50unattended-upgrades"
+# sudo sed -i '/${distro_id}:${distro_codename}-updates/c\"${distro_id}:${distro_codename}-updates";' "/etc/apt/apt.conf.d/50unattended-upgrades"
 
-sudo echo 'APT::Periodic::Update-Package-Lists "1";
-APT::Periodic::Download-Upgradeable-Packages "1";
-APT::Periodic::AutocleanInterval "7";
-APT::Periodic::Unattended-Upgrade "1";' | sudo tee "/etc/apt/apt.conf.d/10periodic" > /dev/null
-sudo systemctl restart unattended-upgrades
+# sudo echo 'APT::Periodic::Update-Package-Lists "1";
+# APT::Periodic::Download-Upgradeable-Packages "1";
+# APT::Periodic::AutocleanInterval "7";
+# APT::Periodic::Unattended-Upgrade "1";' | sudo tee "/etc/apt/apt.conf.d/10periodic" > /dev/null
+# sudo systemctl restart unattended-upgrades
 
 sudo apt upgrade -y
 
@@ -48,6 +50,7 @@ else
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
     unzip awscliv2.zip
     sudo ./aws/install
+    rm awscliv2.zip
 fi
 
 sudo apt autoremove -y

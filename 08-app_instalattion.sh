@@ -92,8 +92,8 @@ var_export($common);
             ],
             "components" => [
                 "urlManager" => [
-                    "baseUrl" => "http://'${HUMHUB_DOMAIN}':80",
-                    "hostInfo" => "http://'${HUMHUB_DOMAIN}':80",
+                    "baseUrl" => "http://'${HUMHUB_DOMAIN}':80"
+               
                 ]
             ]
     ];' > ${HUMHUB_DIR}/protected/config/console.php
