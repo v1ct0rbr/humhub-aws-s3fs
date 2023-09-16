@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo 'definindo variáveis de ambiente.........................................01%'
-export HUMHUB_DOMAIN='app.tecnofoco.social'
+export HUMHUB_DOMAIN='humhub.suaempresa.com'
 export HUMHUB_DIR='/var/www/html/humhub'
 export HUMHUB_AWS_S3_BUCKET='bucket'
 export HUMHUB_AWS_KEY_ID='key_id'

@@ -2,7 +2,6 @@
 
 INSTALLED_VERSION=
 latest_humhub_version=
-VERSAO_EXISTENTE=
 
 get_latest_humhub_version() {
     #echo 'Verificando a versão da aplicação.......................................12%'
