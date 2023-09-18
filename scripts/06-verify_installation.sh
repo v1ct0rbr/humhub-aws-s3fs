@@ -25,6 +25,8 @@ else
     
     composer config --no-plugins allow-plugins.yiisoft/yii2-composer true && \
     composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader && \
+    composer require symfony/amazon-mailer
+    composer require symfony/http-client
     chmod +x protected/yii && \
     chmod +x protected/yii.bat && \
     npm install grunt && \

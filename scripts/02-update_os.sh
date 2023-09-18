@@ -22,7 +22,7 @@ sudo apt upgrade -y
 
 sudo apt install -y php php-cli \
 php-imagick php-curl php-bz2 php-gd php-intl php-mbstring \
-php-mysql php-zip php-apcu php-xml php-ldap composer python3 jq ca-certificates s3fs fuse
+php-mysql php-zip php-apcu php-xml php-ldap composer python3 jq ca-certificates s3fs fuse binutils
 
 sudo apt remove -y apache2
 

@@ -50,6 +50,7 @@ export HUMHUB_AWS_S3_BUCKET='seu bucket de arquivos'
 export HUMHUB_AWS_KEY_ID='sua key'
 export HUMHUB_AWS_ACCESS_KEY='sua secret key'
 export HUMHUB_AWS_S3_UPLOAD_DIRECTORY="${HUMHUB_DIR}/uploads"
+export EFS_DNS="seuefs_id.efs.regiao.amazonaws.com"
 
 ##### EXCLUSIVO PARA O S3 ########
 S3_CONFIG_ENABLED=1
