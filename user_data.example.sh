@@ -126,4 +126,6 @@ fi
 
 sudo s3fs "$HUMHUB_AWS_S3_BUCKET" "${HUMHUB_AWS_S3_UPLOAD_DIRECTORY}" -o _netdev,allow_other,nonempty,umask=000,passwd_file=/home/ubuntu/.passwd-s3fs,use_cache=/tmp
 
-
+#sudo snap switch --channel=candidate amazon-ssm-agent
+#sudo systemctl restart snap.amazon-ssm-agent.amazon-ssm-agent.service
+#sudo snap start amazon-ssm-agent
