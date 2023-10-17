@@ -30,11 +30,16 @@ HumHub é uma plataforma de rede social de código aberto com uma ampla variedad
     
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+### Estrutura utilizada (Não recomendado)
+![estrutura](https://raw.githubusercontent.com/v1ct0rbr/humhub-aws-s3fs/main/images/diagrama_v3.drawio.png?token=GHSAT0AAAAAACIYJVZKE3LZMQQLUYYNWRYUZJOQILA)
 
-
+### Ambiente funcionando
+![Ambiente](https://raw.githubusercontent.com/v1ct0rbr/humhub-aws-s3fs/main/images/tela_humhub01.png?token=GHSAT0AAAAAACIYJVZKBUVQJJ22CSXOTKJ6ZJOQJJQ)
 ## Melhorias almejadas
 
 O projeto foi feito inicialmente para armazenar os arquivos de trabalho no S3 utilizando o S3FS (O que não é recomendado, pois há muita concorrência e disparo de funções da API que encarecem o valor de utilização do serviço e diminuem a performance). Portanto é interessante que se utilize o EFS para compartilhar os arquivos corretamente entre as instâncias. Não tinha muito conhecimento disso quando estava estudando... :(
     
+
+
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
