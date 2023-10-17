@@ -4,20 +4,6 @@ echo 'Instalando dependências..................................................
 
 sudo apt update -y 
 
-#sudo apt-get install -y unattended-upgrades
-
-#sudo cp /etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades.backup_$(date +%s%N | cut -b1-13)
-
-# sudo sed -i '/${distro_id}:${distro_codename}-proposed/c\"${distro_id}:${distro_codename}-proposed";' "/etc/apt/apt.conf.d/50unattended-upgrades"
-# sudo sed -i '/${distro_id}:${distro_codename}-backports/c\"${distro_id}:${distro_codename}-backports";' "/etc/apt/apt.conf.d/50unattended-upgrades"
-# sudo sed -i '/${distro_id}:${distro_codename}-updates/c\"${distro_id}:${distro_codename}-updates";' "/etc/apt/apt.conf.d/50unattended-upgrades"
-
-# sudo echo 'APT::Periodic::Update-Package-Lists "1";
-# APT::Periodic::Download-Upgradeable-Packages "1";
-# APT::Periodic::AutocleanInterval "7";
-# APT::Periodic::Unattended-Upgrade "1";' | sudo tee "/etc/apt/apt.conf.d/10periodic" > /dev/null
-# sudo systemctl restart unattended-upgrades
-
 sudo apt upgrade -y
 
 sudo apt install -y php php-cli \
